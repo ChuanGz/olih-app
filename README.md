@@ -129,3 +129,9 @@ The frontend lives in `web` and uses a standard React setup with TypeScript. The
 - The codebase still uses the `Olih` prefix internally.
 - This repository replaces the previous split setup of `qna-app-api` and `qna-app-reactjs`.
 - Checked-in configuration files use placeholder credentials only. Real secrets should be provided through local environment variables or local-only config overrides.
+
+## Usage Policy
+
+- This repository is shared for learning, technical review, and knowledge sharing.
+- No permission is granted to copy, reuse, modify, redistribute, sublicense, sell, deploy, or use this code in another repository, product, service, or internal system without prior written approval from the repository owner.
+- See [LICENSE](LICENSE), [NOTICE.md](NOTICE.md), [DISCLAIMER.md](DISCLAIMER.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
