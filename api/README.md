@@ -23,6 +23,12 @@ dotnet run --project Olih.Api/Olih.Api.csproj
 
 Swagger is enabled in the Development environment.
 
+## Test
+
+```bash
+dotnet test olih.sln
+```
+
 ## Project Layout
 
 - `Olih.Api`: API host and controllers

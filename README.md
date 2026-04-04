@@ -2,6 +2,13 @@
 
 Olih App is a monorepo for a .NET backend API and a React web client. The repository combines the previously split API and frontend projects into a single workspace with a flatter, easier-to-navigate structure.
 
+## Highlights
+
+- Single repository for the backend API and web client
+- .NET solution organized around API, domain, infrastructure, and tests
+- React frontend with TypeScript and Ant Design
+- EF Core migrations included in the backend project
+
 ## Tech Stack
 
 - Backend: ASP.NET Core, Entity Framework Core, SQL Server
@@ -13,6 +20,23 @@ Olih App is a monorepo for a .NET backend API and a React web client. The reposi
 - `api`: .NET solution, domain model, infrastructure, and tests
 - `web`: React web client and local mock data
 - `docs`: project notes and supporting documentation
+
+## Architecture Snapshot
+
+```text
+.
+├── api
+│   ├── Olih.Api
+│   ├── Olih.Domain
+│   ├── Olih.Infrastructure
+│   ├── Olih.Common
+│   └── Olih.XUnit
+├── web
+│   ├── src
+│   ├── public
+│   └── package.json
+└── docs
+```
 
 ## Prerequisites
 
@@ -41,6 +65,13 @@ npm install
 npm start
 ```
 
+## Development Workflow
+
+1. Start the API from `api`.
+2. Start the web client from `web`.
+3. Apply EF Core migrations when the database model changes.
+4. Run backend tests before pushing changes.
+
 ## Backend Development
 
 The backend solution is organized into the following projects:
@@ -63,6 +94,13 @@ Apply database changes:
 
 ```bash
 dotnet ef database update -s Olih.Api/Olih.Api.csproj -c OlihDbContext -p Olih.Infrastructure/Olih.Infrastructure.csproj
+```
+
+Run backend tests:
+
+```bash
+cd api
+dotnet test olih.sln
 ```
 
 ## Frontend Development

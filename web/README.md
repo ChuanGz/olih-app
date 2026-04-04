@@ -28,6 +28,12 @@ npm test
 npm run build
 ```
 
+## Project Areas
+
+- `src/components`: shared and feature-specific UI components
+- `src/data`: local data used for development and UI rendering
+- `src/types`: frontend types and view models
+
 ## Notes
 
 - The current package name is still `olih-demo`.
