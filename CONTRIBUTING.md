@@ -34,3 +34,13 @@ By submitting any issue, pull request, patch, or other material, you confirm tha
 If you submit code, text, diagrams, or other material, you grant the repository owner a perpetual, worldwide, irrevocable, royalty-free, sublicensable right to use, modify, adapt, publish, redistribute, relicense, or reject that submission without compensation.
 
 Do not submit material if you do not agree with these terms.
+
+## Commit Messages
+
+Use short, clean English commit messages with a clear action.
+
+Recommended style:
+
+- `Add configuration guide for local development`
+- `Fix broken README links`
+- `Sanitize checked-in development settings`
