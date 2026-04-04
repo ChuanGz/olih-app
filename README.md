@@ -21,6 +21,11 @@ Olih App is a monorepo for a .NET backend API and a React web client. The reposi
 - `web`: React web client and local mock data
 - `docs`: project notes and supporting documentation
 
+## Documentation
+
+- [`docs/architecture.md`](docs/architecture.md)
+- [`docs/configuration.md`](docs/configuration.md)
+
 ## Architecture Snapshot
 
 ```text
@@ -43,6 +48,18 @@ Olih App is a monorepo for a .NET backend API and a React web client. The reposi
 - .NET 8 SDK
 - Node.js and npm
 - SQL Server for local API development
+
+## Configuration
+
+The backend connection string in `api/Olih.Api/appsettings*.json` is intentionally checked in with placeholder credentials.
+
+Set a real local connection string before starting the API:
+
+```bash
+export ConnectionStrings__OlibDb="Server=localhost;Database=olihdb;User Id=<set-me>;Password=<set-me>;TrustServerCertificate=True"
+```
+
+You can also update your local `appsettings.Development.json` if that better matches your development workflow.
 
 ## Quick Start
 
@@ -111,3 +128,4 @@ The frontend lives in `web` and uses a standard React setup with TypeScript. The
 
 - The codebase still uses the `Olih` prefix internally.
 - This repository replaces the previous split setup of `qna-app-api` and `qna-app-reactjs`.
+- Checked-in configuration files use placeholder credentials only. Real secrets should be provided through local environment variables or local-only config overrides.

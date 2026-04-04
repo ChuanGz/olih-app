@@ -23,6 +23,21 @@ dotnet run --project Olih.Api/Olih.Api.csproj
 
 Swagger is enabled in the Development environment.
 
+## Configuration
+
+The checked-in connection string uses placeholder credentials.
+
+Set the local database connection string before starting the API:
+
+```bash
+export ConnectionStrings__OlibDb="Server=localhost;Database=olihdb;User Id=<set-me>;Password=<set-me>;TrustServerCertificate=True"
+```
+
+Additional repository docs:
+
+- [`../docs/architecture.md`](../docs/architecture.md)
+- [`../docs/configuration.md`](../docs/configuration.md)
+
 ## Test
 
 ```bash
@@ -55,3 +70,4 @@ dotnet ef database update -s Olih.Api/Olih.Api.csproj -c OlihDbContext -p Olih.I
 
 - The solution still uses the historical `Olih` naming convention.
 - The API currently uses SQL Server through `OlihDbContext`.
+- Real credentials should not be committed. Use environment variables or local-only overrides for development secrets.
