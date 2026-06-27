@@ -9,6 +9,10 @@ Olih App is a monorepo for a .NET backend API and a React web client. The reposi
 - React frontend with TypeScript and Ant Design
 - EF Core migrations included in the backend project
 
+## Scope
+
+This repository covers the Olih API, domain and data-access layers, browser client, and backend tests. Production infrastructure, hosted service configuration, and real credentials are intentionally outside the repository.
+
 ## Tech Stack
 
 - Backend: ASP.NET Core, Entity Framework Core, SQL Server
@@ -80,6 +84,12 @@ The API enables Swagger in the Development environment.
 cd web
 npm install
 npm start
+```
+
+Run the frontend test suite from `web`:
+
+```bash
+npm test -- --watchAll=false
 ```
 
 ## Development Workflow
